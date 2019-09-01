@@ -110,7 +110,7 @@ mvn archetype:generate -DarchetypeGroupId=wyn -DarchetypeArtifactId=myarchetype 
 
 ## 生成Archetype Catalog
 
-使用archetype创建项目时，一般需要精确指定archetype的坐标信息，maven-archtype-plugin会提供一个archetype列表供用户选择。该列表的信息来源一个叫archetype-catalog.xml的文件。
+使用archetype创建项目时，一般不需要精确指定archetype的坐标信息，maven-archtype-plugin会提供一个archetype列表供用户选择。该列表的信息来源一个叫archetype-catalog.xml的文件。
 
 那么能否把我们自定义的archetype加入到这个列表中呢？答案是肯定的。
 
@@ -121,4 +121,3 @@ maven-archetype-plugin提供了一个crawl的goal，用户可以使用它来遍�
 然后，我们在执行`mvn archetype:generator`命令生成的新项目时，就可以看到我们自定义的archetype。
 
 ![archetype_generate.png](https://i.loli.net/2019/09/01/NTtSCZlJyj3b4rE.png)
-
